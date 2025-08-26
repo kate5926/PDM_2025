@@ -2,6 +2,4 @@
 
 ## Curso  
 Dispositivos Móviles  
-
-## Alumno  
 Katherine Saico  
