@@ -1,2 +1,3 @@
 # PDM_2025
-Dispositivos Móviles 
+curso : Dispositivos Móviles 
+alumno: Katherine Saico
