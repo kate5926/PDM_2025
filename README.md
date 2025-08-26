@@ -1,6 +1,7 @@
-#  PDM_2025  
+# PDM_2025  
 
- **Curso:** *Programación de Dispositivos Móviles*  
- **Alumno:** *Katherine Saico*  
+## Curso  
+Dispositivos Móviles  
 
----
+## Alumno  
+Katherine Saico  
