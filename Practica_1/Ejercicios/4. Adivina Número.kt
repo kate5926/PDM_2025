@@ -1,3 +1,7 @@
+/**
+. Escribe un programa que genere un número aleatorio entre 1 y
+30, luego pida al usuario que adivine el número.
+*/
 import kotlin.random.Random
 
 fun main() {
