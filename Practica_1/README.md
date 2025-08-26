@@ -3,12 +3,10 @@
 ## Descripción  
 Esta practica contiene cuatro ejercicios desarrollados en **Kotlin**, cada uno diseñado para aplicar conceptos básicos del lenguaje mediante programas interactivos.  
 
-### Ejercicios incluidos:  
-- Evaluación de empleados  
-- Juego de Piedra, Papel o Tijera  
-- Calculadora elemental  
-- Adivina el Número  
-
+- [Ejercicio 1: Calculadora de Salario](ejercicios/ejercicio1.kt)  
+- [Ejercicio 2: Piedra, papel y tijeras](ejercicios/ejercicio2.kt)  
+- [Ejercicio 3: Calculadora básica](ejercicios/ejercicio3.kt)  
+- [Ejercicio 4: Adivina el Número](ejercicios/ejercicio4.kt)  
 ---
 
 ## Requisitos   
@@ -18,7 +16,7 @@ Esta practica contiene cuatro ejercicios desarrollados en **Kotlin**, cada uno d
 
 ## Estructura del Proyecto  
 
-### Ejercicio 1: Evaluación de Empleados  
+### [Ejercicio 1: Calculadora de Salario](ejercicios/ejercicio1.kt)   
 **Descripción:**  
 Programa que calcula el nivel de rendimiento y la cantidad de dinero adicional que recibe un empleado según su puntuación de evaluación (0 a 10).  
 
