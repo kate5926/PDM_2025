@@ -1,5 +1,7 @@
 # PDM_2025  
 
+## Curso  
+Dispositivos Móviles  
 
-- Dispositivos Móviles  
-- Katherine Saico  
+## Alumno  
+Katherine Saico  
