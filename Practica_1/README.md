@@ -11,7 +11,8 @@ Esta practica contiene cuatro ejercicios desarrollados en **Kotlin**, cada uno d
 
 ## Estructura del Proyecto  
 
-### [Ejercicio 1: Calculadora de Salario](Practica_1/Ejercicios/1.Evaluación Empleados.kt)   
+### [Ejercicio 1: Calculadora de Salario](Practica_1/Ejercicios/1.Evaluación%20Empleados.kt)
+ 
 **Descripción:**  
 Programa que calcula el nivel de rendimiento y la cantidad de dinero adicional que recibe un empleado según su puntuación de evaluación (0 a 10).  
 
