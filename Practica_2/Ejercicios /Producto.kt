@@ -1,11 +1,8 @@
 
 /*
-Descripción: Clase para Producto: Diseña una clase Producto que tenga un precio
- y un descuento aplicable. Implementa métodos set y get para establecer y obtener
- el precio y el descuento, y añade un método para calcular el precio final después
-                                         de aplicar el descuento. Utilice el set para validar datos.
-
-Autor:
+Descripción: Clase Producto contiene precio y descuento . Implementa métodos set y get para establecer y obtener
+ el precio y el descuento.Incluñe un método para calcular el precio final después de aplicar el descuento.
+Autor: katherine Saico
 Fecha creación: 31/08/2025
 Fecha última modificación: 31/08/2025
 */
