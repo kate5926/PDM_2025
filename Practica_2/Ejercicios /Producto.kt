@@ -11,13 +11,13 @@ Fecha última modificación: 31/08/2025
 */
 
 class Producto {
-
-    // Precio no puede ser negativo ni cero
-    var precio: Double = 0.0
+  //Precio 
+   var precio: Double = 0.0
         set(value) {
             require(value > 0) { "El precio debe ser mayor que 0." }
-            precio = value
+            field = value
         }
+        get() { return field }   
 
     // Descuento, debe estar entre 0 y 100
     var descuento: Double = 0.0
