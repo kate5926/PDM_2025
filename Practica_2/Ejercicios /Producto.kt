@@ -38,30 +38,41 @@ fun main() {
     val producto = Producto()
     var opcion: Int
 
-    do {
+do {
         println("\n--- MENÚ PRODUCTO ---")
-        println("1. Establecer precio base")
-        println("2. Establecer descuento")
-        println("3. Ver precio final")
-        println("4. Ver información completa")
+        println("1. Ingresar precio base ")
+        println("2. Ingresar descuento ")
+        println("3. Mostrar precio final")
+        println("4. Mostrar precio y descuento ")
         println("5. Salir")
-        print("Opción: ")
+        print("Seleccione una opción: ")
 
         opcion = readLine()?.toIntOrNull() ?: 0
 
         when (opcion) {
             1 -> {
                 print("Ingrese el precio base: ")
-                producto.precio = readLine()?.toDoubleOrNull() ?: 0.0
+                val valor = readLine()?.toDoubleOrNull()
+                try {
+                    if (valor != null) producto.precio = valor
+                } catch (e: IllegalArgumentException) {
+                    println(" ${e.message}")
+                }
             }
             2 -> {
                 print("Ingrese el descuento (%): ")
-                producto.descuento = readLine()?.toDoubleOrNull() ?: 0.0
+                val valor = readLine()?.toDoubleOrNull()
+                try {
+                    if (valor != null) producto.descuento = valor
+                } catch (e: IllegalArgumentException) {
+                    println(" ${e.message}")
+                }
             }
-            3 -> {
-                println("El precio final es: ${producto.calcularPrecioFinal()}")
+            3 -> println("El precio final con descuento es: ${producto.calcularPrecioFinal()}")
+            4 -> {
+                println("Precio actual : ${producto.precio}")
+                println("Descuento actual : ${producto.descuento}%")
             }
-            4 -> producto.mostrarProducto()
             5 -> println("Saliendo del sistema de productos...")
             else -> println("Opción inválida.")
         }
