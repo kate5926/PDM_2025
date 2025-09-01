@@ -20,25 +20,19 @@ class Producto {
         get() { return field }   
 
     // Descuento, debe estar entre 0 y 100
-    var descuento: Double = 0.0
+   var descuento: Double = 0.0
         set(value) {
-            require(value in 0.0..100.0) { " El descuento debe estar entre 0% y 100%." }
-            descuento = value
+            require(value in 0.0..100.0) { "El descuento debe estar entre 0% y 100%." }
+            field = value
         }
+        get() { return field } 
 
     // Método para calcular el precio final con el descuento aplicado
     fun calcularPrecioFinal(): Double {
         return precio - (precio * descuento / 100)
     }
 
-    // Método para mostrar toda la información del producto
-    fun mostrarProducto() {
-        println("\n--- INFORMACIÓN DEL PRODUCTO ---")
-        println("Precio base: $precio")
-        println("Descuento: $descuento%")
-        println("Precio final: ${calcularPrecioFinal()}")
-    }
-}
+   
 
 fun main() {
     val producto = Producto()
