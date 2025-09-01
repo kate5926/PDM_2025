@@ -40,7 +40,7 @@ class CuentaBancaria(limiteInicial: Double) {
     // Método para retirar dinero considerando su límite y el saldo
     fun retirar(monto: Double) {
         when {
-            monto <= 0 -> println("Monto inválido.")
+            monto <= 0 -> println("Monto inválido.") 
             monto > saldo -> println(" Saldo insuficiente. Saldo disponible: $saldo")
             monto > limiteRetiro -> println("El monto excede el límite del retiro: $limiteRetiro")
             else -> {
@@ -86,6 +86,6 @@ fun main() {
             4 -> println(" Saliendo de la Cuenta Bancaria...")
             else -> println("Error.")
         }
-    } while (opcion != 4)
+    } while (opcion != 4) //Se repite hasta que se elija Salir
 }
 
