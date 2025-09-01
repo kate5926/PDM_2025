@@ -1,12 +1,9 @@
 /*
-Descripción:
-Clase para Cuenta Bancaria: Diseña una clase CuentaBancaria que tenga un saldo
-y un límite de retiro. Implementa métodos set y get para establecer y obtener
-el saldo, y añade un método para realizar retiros que tenga en cuenta el límite
-                         de retiro. Utilice el set para validar datos.
-Autor:
-Fecha creación:
-Fecha última modificación:
+Descripción:  Clase CuentaBancaria con saldo y límite de retiro, incluye validación en setters, 
+métodos para depositar, retirar y mostrar el saldo. 
+Autor: katherine Saico
+Fecha creación: 31/08/2025
+Fecha última modificación: 31/08/25
 */
 
 class CuentaBancaria(limiteInicial: Double) {
