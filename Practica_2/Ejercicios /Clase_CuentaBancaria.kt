@@ -8,20 +8,21 @@ Fecha última modificación: 31/08/25
 
 class CuentaBancaria(limiteInicial: Double) {
 
-    // Atributos privados con get y set
+    // Variable Saldo con set para evitar que acepte valores negativos
     var saldo: Double = 0.0
         set(value) {
-            if (value >= 0) field = value
+            if (value >= 0) field = value //
             else println(" Tu saldo no puede ser negativo")
         }
-
+        
+   // Variable LimiteRetiro validamos que sea mayor a cero
     var limiteRetiro: Double = 0.0
         set(value) {
             if (value > 0) field = value
             else println(" El límite del retiro debe ser mayor que 0.")
         }
         get() = field
-
+   // Inint sirve para asignar el valor del limite al crear la cuenta
     init {
         limiteRetiro = limiteInicial
     }
