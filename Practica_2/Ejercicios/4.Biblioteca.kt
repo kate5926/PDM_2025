@@ -1,3 +1,13 @@
+/**
+ * Descripción del problema:
+ *   Se desea desarrollar un sistema básico de gestión de biblioteca
+ *   que permita registrar materiales y usuarios, prestar y devolver
+ *   materiales, y mostrar la disponibilidad.
+ *
+ * Autor:        Katherine Saico
+ * Fecha:        70/09/2025
+ */
+
 // Clase abstracta base
 abstract class Material(
     val titulo: String,
@@ -7,7 +17,7 @@ abstract class Material(
     abstract fun mostrarInfo()
 }
 
-// Libro
+// Clase que representa un libro, hereda de Material
 class Libro(
     titulo: String,
     autor: String,
@@ -20,7 +30,7 @@ class Libro(
     }
 }
 
-// Revista
+// Subclase  Revista
 class Revista(
     titulo: String,
     autor: String,
@@ -33,17 +43,16 @@ class Revista(
         println(" Revista: $titulo | ISSN: $issn | Volumen: $volumen | Número: $numero | Año: $anio")
     }
 }
-
-// Usuario
+// Clase de datos para guardar la información de un usuario
 data class Usuario(
     val nombre: String,
     val apellido: String,
     val edad: Int
 )
 
-// Interfaz
+// Interfaz d
 interface IBiblioteca {
-    fun agregarMaterial(material: Material)
+    fun agregarMaterial(material: Material)    
     fun agregarUsuario(usuario: Usuario)
     fun prestar(material: Material, usuario: Usuario)
     fun devolver(material: Material, usuario: Usuario)
@@ -53,20 +62,20 @@ interface IBiblioteca {
 
 // Implementación
 class Biblioteca : IBiblioteca {
-    private val disponibles = mutableListOf<Material>()
-    private val usuarios = mutableListOf<Usuario>()
-    private val prestamos = mutableMapOf<Usuario, MutableList<Material>>()
+    private val disponibles = mutableListOf<Material>()  // Lista de materiales disponibles para préstamo
+    private val usuarios = mutableListOf<Usuario>()          // Lista de usuarios registrados
+    private val prestamos = mutableMapOf<Usuario, MutableList<Material>>()   // Relación de usuario con los materiales que tiene en préstamo
 
     override fun agregarMaterial(material: Material) {
-        disponibles.add(material)
+        disponibles.add(material)      // Agrega un material nuevo a la biblioteca
     }
 
-    override fun agregarUsuario(usuario: Usuario) {
+    override fun agregarUsuario(usuario: Usuario) {    // Registra un nuevo usuario y lo inicializa sin préstamos
         usuarios.add(usuario)
         prestamos[usuario] = mutableListOf()
     }
 
-    override fun prestar(material: Material, usuario: Usuario) {
+    override fun prestar(material: Material, usuario: Usuario) {      // Realiza un préstamo si el material está disponible
         if (disponibles.remove(material)) {
             prestamos[usuario]?.add(material)
             println("Préstamo realizado: '${material.titulo}' para ${usuario.nombre}")
@@ -75,7 +84,7 @@ class Biblioteca : IBiblioteca {
         }
     }
 
-    override fun devolver(material: Material, usuario: Usuario) {
+    override fun devolver(material: Material, usuario: Usuario) {    // Devuelve un material prestado, regresándolo a la lista de disponibles
         if (prestamos[usuario]?.remove(material) == true) {
             disponibles.add(material)
             println("Devolución realizada: '${material.titulo}' de ${usuario.nombre}")
@@ -84,13 +93,13 @@ class Biblioteca : IBiblioteca {
         }
     }
 
-    override fun listarMateriales() {
+    override fun listarMateriales() {       // Muestra todos los materiales disponibles
         println("\n Materiales en la biblioteca:")
         if (disponibles.isEmpty()) println(" - Ninguno disponible")
         else disponibles.forEach { it.mostrarInfo() }
     }
 
-    override fun listarPrestamos(usuario: Usuario) {
+    override fun listarPrestamos(usuario: Usuario) {   // Muestra los préstamos de un usuario en particular
         println("\n Materiales prestados a ${usuario.nombre}:")
         val lista = prestamos[usuario]
         if (lista.isNullOrEmpty()) println(" - Ninguno")
