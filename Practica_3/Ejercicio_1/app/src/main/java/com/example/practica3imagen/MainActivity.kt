@@ -1,7 +1,7 @@
 /*
 Descripción: Actividad que muestra una imagen y al hacer clic despliega un Toast.
-Autor: [Tu Nombre]
-Fecha creación: 31/08/2025
+Autor: Katherine Saico
+Fecha creación: 07/08/2025
 Fecha última modificación: 31/08/2025
 */
 
