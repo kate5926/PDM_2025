@@ -13,7 +13,7 @@ A continuación se presenta un resumen de cada una de las prácticas incluidas e
 
 ---
 
-### [Práctica 1: Fundamentos de Kotlin](./Practica_1/README.md)
+### [Práctica 1: Fundamentos de Kotlin](./Practica_1)
 
 Esta práctica se enfoca en los conceptos básicos de Kotlin a través de cuatro ejercicios interactivos:
 - **Evaluación de Empleados:** Calcula el rendimiento y bonificación de un empleado.
