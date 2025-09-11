@@ -1,4 +1,4 @@
-/* Descripción: Reproductor de música con botones y una imagen interactiva usando Jetpack Compose.
+/* Descripción: Reproductor de música con botones y una imagen.
  Permite reproducir, pausar y detener música local, y muestra un mensaje al tocar la imagen.
 Autor: Katherine Saico
 Fecha creación: 07/09/2025
