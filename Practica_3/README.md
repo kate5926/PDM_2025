@@ -64,5 +64,5 @@ Implementar un reproductor que permita reproducir audio desde los recursos local
 ## Cómo Probar  
 - Abrir la carpeta del ejercicio en Android Studio.  
 - Asegurarse de tener configurado el SDK y un emulador.  
-- Ejecutar con el botón **Run (▶)**.  
+- Ejecutar  
 
