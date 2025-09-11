@@ -23,7 +23,7 @@ Esta práctica se enfoca en los conceptos básicos de Kotlin a través de cuatro
 
 ---
 
-### [Práctica 2: Programación Orientada a Objetos](./Practica_2)
+### [Práctica 2: Programación Orientada a Objetos](./Practica_2/Ejercicios/)
 
 Esta sección se centra en la aplicación de los principios de la Programación Orientada a Objetos (POO) en Kotlin. Incluye:
 - **Clase CuentaBancaria:** Simula las operaciones de una cuenta bancaria.
