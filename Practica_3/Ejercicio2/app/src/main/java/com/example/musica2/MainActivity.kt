@@ -53,7 +53,7 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.padding(innerPadding),
                         onImageClick = {
                             // Muestra un Toast al tocar la imagen
-                            Toast.makeText(this, "¡Hola! Tocaste al gato 🐱", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, "¡Hola! Tocaste al gato ", Toast.LENGTH_SHORT).show()
                         },
                         onPlay = {
                             if (mediaPlayer == null) {
