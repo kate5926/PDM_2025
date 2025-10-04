@@ -24,7 +24,6 @@ Esta práctica implementa un sistema completo de gestión de usuarios utilizando
 ### Gestión de Usuarios
 - **Agregar usuarios** mediante botón flotante  
 - **Editar usuarios** con diálogo personalizado  
-- **Eliminar usuarios** con confirmación  
 - **Validación** de campos de entrada  
 
 ### Interacción de Usuario
