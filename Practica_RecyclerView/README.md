@@ -53,5 +53,32 @@ Esta práctica implementa un sistema completo de gestión de usuarios utilizando
 - `drawable/` → Iconos y elementos gráficos  
 
 ---
+## Preguntas de reflexión
+### 1. ¿Qué diferencia hay entre `notifyItemRemoved()`, `notifyItemInserted()` y `notifyItemChanged()`?
+- **`notifyItemRemoved(pos)`** → Se usa al **eliminar** un elemento de la lista. El `RecyclerView` actualiza la vista quitando ese ítem.
+- **`notifyItemInserted(pos)`** → Se usa al **agregar** un nuevo elemento en la lista en la posición `pos`. El `RecyclerView` lo muestra con animación de entrada.
+- **`notifyItemChanged(pos)`** → Se usa cuando un ítem ya existente fue **modificado** (ejemplo: editar nombre, edad o correo). El `RecyclerView` lo vuelve a dibujar.
+
+Resumen:  
+- Removed → eliminar.  
+- Inserted → agregar.  
+- Changed → actualizar.  
+
+---
+
+### 2. ¿Por qué es necesario validar `bindingAdapterPosition != RecyclerView.NO_POSITION`?
+- Es necesario validar que bindingAdapterPosition != RecyclerView.NO_POSITION porque el ViewHolder puede encontrarse en un estado inválido
+- o haber sido reciclado. Esta validación asegura que la posición sigue siendo válida al interactuar con un elemento, evitando errores como
+- IndexOutOfBoundsException o NullPointerException, y garantizando un manejo seguro de la lista en el RecyclerView.
+
+---
+
+### 3. ¿Qué ventajas tiene usar un diálogo frente a abrir una nueva pantalla para editar?
+- Permite **editar datos sin salir de la misma pantalla**, manteniendo el flujo del usuario.  
+- Es más **rápido y ligero**, ideal para cambios simples (nombre, edad, correo).  
+- Mejora la **experiencia de usuario**, al no interrumpir la navegación.  
+- Una nueva pantalla puede ser útil en ediciones complejas, pero para modificaciones rápidas el **diálogo es más práctico**.  
+
+---
 
 
