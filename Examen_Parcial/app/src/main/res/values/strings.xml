@@ -1,24 +1,10 @@
 <resources>
-    <string name="app_name">Examen_Parcial</string>
-
-    <!-- Welcome Fragment -->
-    <string name="welcome_title">Juego de Colores</string>
-    <string name="welcome_message">¡Bienvenido!</string>
+    <string name="app_name">Juego de Colores</string>
     <string name="start_game">Iniciar Juego</string>
-    <string name="game_instructions">Instrucciones: Presiona el botón que coincida con el color mostrado. Tienes 30 segundos para obtener la mayor cantidad de aciertos.</string>
-    <string name="btn_understand">Entendido</string>
-
-    <!-- Game Fragment -->
+    <string name="play_again">Jugar Otra Vez</string>
     <string name="score">Puntaje: %d</string>
-    <string name="time_remaining">Tiempo: %ds</string>
-    <string name="game_over">¡Tiempo Agotado!</string>
-
-    <!-- Result Fragment -->
+    <string name="time">Tiempo: %ds</string>
     <string name="final_score">Puntaje Final: %d</string>
     <string name="high_score">Mejor Puntaje: %d</string>
-    <string name="play_again">Jugar Otra Vez</string>
-    <string name="score_history">Historial de Puntajes</string>
-
-    <!-- Dialog Titles -->
-    <string name="instructions_title">Instrucciones del Juego</string>
+    <string name="score_history">Historial</string>
 </resources>
