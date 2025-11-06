@@ -109,15 +109,3 @@ Algunas URLs inválidas causaban errores en la carga.
 En emuladores antiguos, algunos widgets se veían distorsionados.
 
 -  Solución: ajustar tamaños con MediaQuery y SizedBox para una mejor adaptación a pantallas pequeñas.
-##  Ejemplo de Estructura del Proyecto
-mi_app_personal/
-│
-├── lib/
-│   ├── main.dart
-│   ├── pantalla_inicio.dart
-│   ├── pantalla_perfil.dart
-│   └── pantalla_hobbies.dart
-│
-├── pubspec.yaml
-├── README.md
-└── .gitignore
