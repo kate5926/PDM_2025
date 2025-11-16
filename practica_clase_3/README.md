@@ -1,4 +1,4 @@
-# practica_clase3
+# Actividades en Clase: Listas Dinámicas y CRUD Local con Provider en Flutter.
 
 A new Flutter project.
 
