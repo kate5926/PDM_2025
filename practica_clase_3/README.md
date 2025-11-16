@@ -20,14 +20,7 @@ Este proyecto implementa un sistema completo de gestión de usuarios usando Flut
 
 ## Requisitos
 
-- **Flutter SDK:** 3.0.0 o superior  
-- **Dart:** Incluido con Flutter  
-- **Dependencias:**  
-  - `provider: ^6.1.5+1` (se instala con `flutter pub get`)
-- **Entorno de desarrollo:** Android Studio, VS Code o similar  
-- **Plataforma:** Android, iOS y Web  
-- **Windows:** Requiere Visual Studio con herramientas de C++ (para desarrollo desktop)
-
+La estructura del sistema se organiza dentro de la carpeta lib, donde main.dart actúa como punto de entrada de la aplicación y configura Provider; la carpeta models contiene user.dart, que define el modelo de datos del usuario (nombre, género, estado activo, edad y correo); la carpeta viewmodels incluye user_view_model.dart, encargado de la lógica de negocio como el CRUD, el filtro de usuarios activos y las notificaciones mediante ChangeNotifier; finalmente, la carpeta views contiene user_list_screen.dart, que muestra la lista de usuarios y las acciones disponibles, y user_form_screen.dart, que permite agregar o editar usuarios.
 ---
 ##Estructura del sistema
 
