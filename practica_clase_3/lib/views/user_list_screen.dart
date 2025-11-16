@@ -9,6 +9,7 @@ class UserListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Obtiene el ViewModel usando Provider para escuchar cambios
     final viewModel = context.watch<UserViewModel>();
 
     return Scaffold(
@@ -22,6 +23,7 @@ class UserListScreen extends StatelessWidget {
           ),
         ],
       ),
+      // Lista de usuarios usando ListView.builder para mejor rendimiento
       body: ListView.builder(
         itemCount: viewModel.usuariosFiltrados.length,
         itemBuilder: (context, index) {
@@ -29,13 +31,15 @@ class UserListScreen extends StatelessWidget {
           return Card(
             child: ListTile(
               title: Text(user.nombre),
-              subtitle: Text('${user.genero} - ${user.activo ? 'Activo' : 'Inactivo'} - Edad: ${user.edad} - Correo: ${user.correo}'),
+              subtitle: Text('${user.genero} - ${user.activo ? 'Activo' : 'Inactivo'} - Edad: ${user.edat'} - Correo: ${user.correo}'),
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  // Botón para editar usuario
                   IconButton(
                     icon: const Icon(Icons.edit),
                     onPressed: () async {
+                      // Navega a la pantalla de formulario para editar
                       final actualizado = await Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -45,11 +49,13 @@ class UserListScreen extends StatelessWidget {
                           ),
                         ),
                       );
+                      // Si se retornó un usuario actualizado, lo guarda
                       if (actualizado != null && actualizado is User) {
                         viewModel.editarUsuario(index, actualizado);
                       }
                     },
                   ),
+                  // Botón para eliminar usuario
                   IconButton(
                     icon: const Icon(Icons.delete, color: Colors.red),
                     onPressed: () => viewModel.eliminarUsuario(index),
@@ -60,12 +66,15 @@ class UserListScreen extends StatelessWidget {
           );
         },
       ),
+      // Botón flotante para agregar nuevo usuario
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
+          // Navega a la pantalla de formulario para crear nuevo usuario
           final nuevoUsuario = await Navigator.push(
             context,
             MaterialPageRoute(builder: (_) => const UserFormScreen()),
           );
+          // Si se retornó un nuevo usuario, lo agrega a la lista
           if (nuevoUsuario != null && nuevoUsuario is User) {
             viewModel.agregarUsuario(nuevoUsuario);
           }
