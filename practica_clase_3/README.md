@@ -29,7 +29,17 @@ Este proyecto implementa un sistema completo de gestión de usuarios usando Flut
 - **Windows:** Requiere Visual Studio con herramientas de C++ (para desarrollo desktop)
 
 ---
-
+##Estructura del sistema
+lib/
+├── main.dart # Punto de entrada de la app, configuración de Provider
+├── models/
+│ └── user.dart # Modelo de datos para User (nombre, género, activo, edad, correo)
+├── viewmodels/
+│ └── user_view_model.dart # Lógica de negocio (CRUD, filtro de activos, ChangeNotifier)
+└── views/
+├── user_list_screen.dart # Pantalla principal con lista de usuarios y acciones
+└── user_form_screen.dart # Formulario para agregar/editar usuarios
+---
 ## Instalación
 
 1. Clona o descarga el proyecto.  
