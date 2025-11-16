@@ -21,18 +21,7 @@ Este proyecto implementa un sistema completo de gestión de usuarios usando Flut
 ## Requisitos
 
 La estructura del sistema se organiza dentro de la carpeta lib, donde main.dart actúa como punto de entrada de la aplicación y configura Provider; la carpeta models contiene user.dart, que define el modelo de datos del usuario (nombre, género, estado activo, edad y correo); la carpeta viewmodels incluye user_view_model.dart, encargado de la lógica de negocio como el CRUD, el filtro de usuarios activos y las notificaciones mediante ChangeNotifier; finalmente, la carpeta views contiene user_list_screen.dart, que muestra la lista de usuarios y las acciones disponibles, y user_form_screen.dart, que permite agregar o editar usuarios.
----
-##Estructura del sistema
 
-lib/
-├── main.dart                    # Punto de entrada de la app, configuración de Provider
-├── models/
-│   └── user.dart                # Modelo de datos para User
-├── viewmodels/
-│   └── user_view_model.dart     # Lógica de negocio (CRUD, filtro, ChangeNotifier)
-└── views/
-    ├── user_list_screen.dart    # Pantalla principal con lista de usuarios
-    └── user_form_screen.dart    # Formulario para agregar/editar usuarios
 ---
 ## Instalación
 
