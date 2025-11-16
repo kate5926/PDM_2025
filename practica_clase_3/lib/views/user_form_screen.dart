@@ -22,6 +22,8 @@ class _UserFormScreenState extends State<UserFormScreen> {
   @override
   void initState() {
     super.initState();
+    // Inicializa los valores del formulario con los datos del usuario existente (si se está editando)
+    // o con valores por defecto (si se está creando uno nuevo)
     if (widget.usuario != null) {
       _nombre = widget.usuario!.nombre;
       _genero = widget.usuario!.genero;
@@ -47,6 +49,7 @@ class _UserFormScreenState extends State<UserFormScreen> {
           key: _formKey,
           child: Column(
             children: [
+              // Campo para el nombre del usuario
               TextFormField(
                 initialValue: _nombre,
                 decoration: const InputDecoration(labelText: 'Nombre'),
@@ -55,6 +58,8 @@ class _UserFormScreenState extends State<UserFormScreen> {
                 onSaved: (value) => _nombre = value!,
               ),
               const SizedBox(height: 20),
+              
+              // Campo para la edad del usuario
               TextFormField(
                 initialValue: _edad.toString(),
                 decoration: const InputDecoration(labelText: 'Edad'),
@@ -68,6 +73,8 @@ class _UserFormScreenState extends State<UserFormScreen> {
                 onSaved: (value) => _edad = int.parse(value!),
               ),
               const SizedBox(height: 20),
+              
+              // Campo para el correo electrónico del usuario
               TextFormField(
                 initialValue: _correo,
                 decoration: const InputDecoration(labelText: 'Correo Electrónico'),
@@ -80,6 +87,8 @@ class _UserFormScreenState extends State<UserFormScreen> {
                 onSaved: (value) => _correo = value!,
               ),
               const SizedBox(height: 20),
+              
+              // Selector de género con botones de radio
               const Text('Género'),
               Row(
                 children: [
@@ -101,16 +110,22 @@ class _UserFormScreenState extends State<UserFormScreen> {
                   ),
                 ],
               ),
+              
+              // Switch para indicar si el usuario está activo
               SwitchListTile(
                 title: const Text('Activo'),
                 value: _activo,
                 onChanged: (value) => setState(() => _activo = value),
               ),
               const SizedBox(height: 30),
+              
+              // Botón para guardar o actualizar el usuario
               ElevatedButton(
                 onPressed: () {
+                  // Valida el formulario antes de guardar
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
+                    // Crea un nuevo objeto User con los datos del formulario
                     final user = User(
                       nombre: _nombre,
                       genero: _genero,
@@ -118,6 +133,7 @@ class _UserFormScreenState extends State<UserFormScreen> {
                       edad: _edad,
                       correo: _correo,
                     );
+                    // Retorna el usuario a la pantalla anterior
                     Navigator.pop(context, user);
                   }
                 },
