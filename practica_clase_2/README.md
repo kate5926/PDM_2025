@@ -1,16 +1,26 @@
-# practica_clase_2
+# Práctica de Clase: Navegación con BottomNavigationBar en Flutter
 
-A new Flutter project.
+## Descripción
 
-## Getting Started
+Este proyecto es una aplicación Flutter que demuestra el uso de `BottomNavigationBar` para la navegación entre diferentes pantallas. La aplicación también incluye una funcionalidad simple para la gestión de usuarios, mostrando una lista de usuarios y permitiendo la edición del nombre del perfil.
 
-This project is a starting point for a Flutter application.
+## Objetivo Académico
 
-A few resources to get you started if this is your first Flutter project:
+-   Implementar y entender el funcionamiento de `BottomNavigationBar` en Flutter.
+-   Gestionar el estado de la navegación entre diferentes pantallas.
+-   Pasar datos entre pantallas (en este caso, el nombre del usuario).
+-   Utilizar `StatefulWidget` para gestionar el estado local de una pantalla.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Funcionalidades Implementadas
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+-   **Navegación por Pestañas:** La aplicación utiliza un `BottomNavigationBar` con cuatro pestañas: "Inicio", "Usuarios", "Configuración" y "Perfil".
+-   **Pantalla de Usuarios:** Muestra una lista de usuarios (integrado con el `UserViewModel` y `UserListScreen`).
+-   **Pantalla de Perfil:** Muestra el nombre del usuario actual y un botón para editarlo.
+-   **Edición de Perfil:** Al presionar el botón de editar, se abre una nueva pantalla que permite al usuario cambiar su nombre. El nuevo nombre se pasa de vuelta a la pantalla de perfil y se actualiza.
+
+## Estructura del Proyecto
+
+-   `main.dart`: El punto de entrada de la aplicación. Contiene la implementación del `BottomNavigationBar` y la lógica de navegación.
+-   `viewmodels/user_view_model.dart`: El `ViewModel` para la gestión de usuarios.
+-   `views/user_list_screen.dart`: La pantalla que muestra la lista de usuarios.
+-   `models/user.dart`: El modelo de datos para un usuario.
